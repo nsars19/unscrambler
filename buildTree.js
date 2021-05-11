@@ -24,9 +24,12 @@ module.exports = function buildTree(str, root = new Tree(), baseStr = str) {
       workAry.splice(idx, 1);
     });
 
+    // Add new TreeNodes for letters that have not yet been used, and attach them as children to the current child.
+    // Recursively call this function with each child as the root to build the tree.
     const newNodes = workAry.map((ltr) => new TreeNode(child.val + ltr));
 
     child.children = newNodes;
+
     buildTree(child.val, child, baseStr);
   }
 
