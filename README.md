@@ -25,4 +25,4 @@ Passing in the string 'cats' will return the object: {
 'scta', 'sact', 'satc',
 'stca', 'stac'
 ]
-}
+<br />}
