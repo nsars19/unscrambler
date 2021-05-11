@@ -14,12 +14,7 @@ function unscrambler(str) {
   // Will hold 2..n-letter word values by letter length. Single letter words are skipped.
   const words = {};
 
-  // Add length properties to words object. Will hold up to `str.length` length words.
-  for (let i = 2; i <= str.length; i++) {
-    words[`${i}Letter`] = [];
-  }
-
-  const tree = buildTree(str);
+  const tree = buildTree(str.toLowerCase());
   const wordsAry = [];
   let root = tree.children;
   const stack = [...root];
@@ -29,4 +24,29 @@ function unscrambler(str) {
     wordsAry.push(curr.val);
     stack.push(...curr.children);
   }
+
+  // Create hash table to store word values by length
+  for (let word of wordsAry) {
+    if (word.length < 2 || !containsVowel(word)) continue;
+
+    const lengthLetter = word.length + " letters";
+    if (words.hasOwnProperty(lengthLetter)) {
+      words[lengthLetter].push(word);
+    } else {
+      words[lengthLetter] = [];
+    }
+  }
+
+  return words;
+}
+
+function containsVowel(str) {
+  return (
+    str.includes("a") ||
+    str.includes("e") ||
+    str.includes("i") ||
+    str.includes("o") ||
+    str.includes("u") ||
+    str.includes("y")
+  );
 }
