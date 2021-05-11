@@ -13,9 +13,9 @@ module.exports = function buildTree(str, root = new Tree(), baseStr = str) {
 
   for (let child of root.children) {
     // Remove child value letters from main string to prevent duplicate values being placed in the tree.
-    // The index array is sorted highest to lowest, so that when an index is removed the highest is done first.
+    // The index array is sorted highest to lowest, so that when an item is spliced via index, the highest index value is used first.
     // This is to prevent smaller index values from 'shifting' a higher index value down, and having the wrong letter be removed
-    // when it comes time to remove that index.
+    // when it comes time to remove the value at that index.
     const letters = child.val.split("");
     const workAry = [...strAry];
 
