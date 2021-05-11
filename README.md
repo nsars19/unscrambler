@@ -7,7 +7,7 @@ Running the function with a string argument will return an object with propertie
 
 Passing in the string 'cats' will return the object: {
 <br />'2 letters': [ 'ac', 'at', 'as', 'ta', 'sa' ],
-'3 letters': [
+<br />'3 letters': [
 'cas', 'cta', 'csa',
 'act', 'acs', 'atc',
 'ats', 'asc', 'ast',
@@ -15,7 +15,7 @@ Passing in the string 'cats' will return the object: {
 'tsa', 'sca', 'sac',
 'sat', 'sta'
 ],
-'4 letters': [
+<br />'4 letters': [
 'cast', 'ctas', 'ctsa',
 'csat', 'csta', 'acts',
 'acst', 'atcs', 'atsc',
