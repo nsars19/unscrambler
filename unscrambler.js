@@ -18,6 +18,7 @@ module.exports = function unscrambler(str) {
   const wordsAry = [];
   const stack = [...tree.children];
 
+  // Do a BFS and add each node's value to the words object
   while (stack.length) {
     let curr = stack.shift();
     wordsAry.push(curr.val);
