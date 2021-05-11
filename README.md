@@ -1,4 +1,4 @@
-#Unscrambler
+<h1>Unscrambler</h1>
 
 The unscrambler function takes a single String as an argument. It is recommended that a string with length no longer than 8 characters is used, as the run time is dramatically increased.
 
