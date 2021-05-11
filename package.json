@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nsars19/unscrambler/issues"
   },
-  "homepage": "https://github.com/nsars19/unscrambler#readme"
+  "homepage": "https://github.com/nsars19/unscrambler#readme",
+  "dependencies": {
+    "an-array-of-english-words": "^2.0.0"
+  }
 }
