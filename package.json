@@ -1,6 +1,6 @@
 {
   "name": "unscrambler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Finds all letter combinations of a string",
   "main": "unscrambler.js",
   "scripts": {
