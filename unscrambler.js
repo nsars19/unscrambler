@@ -1,4 +1,5 @@
 const buildTree = require("./buildTree");
+const list = require("an-array-of-english-words");
 
 module.exports = function unscrambler(str) {
   // Prevent passing of non-string type or empty string as arg.
@@ -24,27 +25,18 @@ module.exports = function unscrambler(str) {
     wordsAry.push(curr.val);
     stack.push(...curr.children);
 
-    if (curr.val.length < 2 || !containsVowel(curr.val)) continue;
+    if (curr.val.length < 2) continue;
 
-    // Create hash table to store word values by length
-    const lengthLetter = curr.val.length + " letters";
-    if (words.hasOwnProperty(lengthLetter)) {
-      words[lengthLetter].push(curr.val);
-    } else {
-      words[lengthLetter] = [];
+    if (list.includes(curr.val)) {
+      // Create hash table to store word values by length
+      const lengthLetter = curr.val.length + " letters";
+      if (words.hasOwnProperty(lengthLetter)) {
+        words[lengthLetter].push(curr.val);
+      } else {
+        words[lengthLetter] = [];
+      }
     }
   }
 
   return words;
-}
-
-function containsVowel(str) {
-  return (
-    str.includes("a") ||
-    str.includes("e") ||
-    str.includes("i") ||
-    str.includes("o") ||
-    str.includes("u") ||
-    str.includes("y")
-  );
-}
+};
