@@ -1,0 +1,19 @@
+{
+  "name": "unscrambler",
+  "version": "1.0.0",
+  "description": "Finds all letter combinations of a string",
+  "main": "unscrambler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsars19/unscrambler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsars19/unscrambler/issues"
+  },
+  "homepage": "https://github.com/nsars19/unscrambler#readme"
+}
