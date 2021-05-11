@@ -6,7 +6,7 @@ Running the function with a string argument will return an object with propertie
 '2 letters' up to 'n letters', where n is the length of the string. The value of each of these properties is an array that holds strings of the specified length. Each of these arrays has words with no vowels removed, as the vast majority of these are nonsense, and the likelihood of one of them being a word is slim. There is no filtering done besides this.
 
 Passing in the string 'cats' will return the object: {
-<br />\n'2 letters': [ 'ac', 'at', 'as', 'ta', 'sa' ],
+<br />'2 letters': [ 'ac', 'at', 'as', 'ta', 'sa' ],
 <br />'3 letters': [
 'cas', 'cta', 'csa',
 'act', 'acs', 'atc',
