@@ -22,22 +22,20 @@ module.exports = function unscrambler(str) {
     let curr = stack.shift();
     wordsAry.push(curr.val);
     stack.push(...curr.children);
-  }
 
-  // Create hash table to store word values by length
-  for (let word of wordsAry) {
-    if (word.length < 2 || !containsVowel(word)) continue;
+    if (curr.val.length < 2 || !containsVowel(curr.val)) continue;
 
-    const lengthLetter = word.length + " letters";
+    // Create hash table to store word values by length
+    const lengthLetter = curr.val.length + " letters";
     if (words.hasOwnProperty(lengthLetter)) {
-      words[lengthLetter].push(word);
+      words[lengthLetter].push(curr.val);
     } else {
       words[lengthLetter] = [];
     }
   }
 
   return words;
-};
+}
 
 function containsVowel(str) {
   return (
