@@ -1,6 +1,6 @@
 const buildTree = require("./buildTree");
 
-function unscrambler(str) {
+module.exports = function unscrambler(str) {
   // Prevent passing of non-string type or empty string as arg.
   const err = {};
   if (typeof str !== "string") {
