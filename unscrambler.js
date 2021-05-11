@@ -16,8 +16,7 @@ module.exports = function unscrambler(str) {
 
   const tree = buildTree(str.toLowerCase());
   const wordsAry = [];
-  let root = tree.children;
-  const stack = [...root];
+  const stack = [...tree.children];
 
   while (stack.length) {
     let curr = stack.shift();
