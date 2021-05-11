@@ -38,7 +38,7 @@ module.exports = function unscrambler(str) {
   }
 
   return words;
-}
+};
 
 function containsVowel(str) {
   return (
