@@ -1,5 +1,6 @@
 const buildTree = require("./buildTree");
 const list = require("an-array-of-english-words");
+const _ = require("lodash");
 
 module.exports = function unscrambler(str) {
   // Prevent passing of non-string type or empty string as arg.
@@ -16,27 +17,28 @@ module.exports = function unscrambler(str) {
   const words = {};
 
   const tree = buildTree(str.toLowerCase());
-  const wordsAry = [];
   const stack = [...tree.children];
 
   // Do a BFS and add each node's value to the words object
   while (stack.length) {
     let curr = stack.shift();
-    wordsAry.push(curr.val);
     stack.push(...curr.children);
 
     if (curr.val.length < 2) continue;
 
-    if (list.includes(curr.val)) {
-      // Create hash table to store word values by length
-      const lengthLetter = curr.val.length + " letters";
-      if (words.hasOwnProperty(lengthLetter)) {
-        words[lengthLetter].push(curr.val);
-      } else {
-        words[lengthLetter] = [];
-      }
+    // Create hash table to store word values by length
+    const lengthLetter = curr.val.length + " letters";
+    if (words.hasOwnProperty(lengthLetter)) {
+      words[lengthLetter].push(curr.val);
+    } else {
+      words[lengthLetter] = [];
     }
   }
 
+  // Search word list for overlap
+  for (let key in words) {
+    words[key] = _.intersection(list, words[key]);
+  }
+
   return words;
-};
+}
