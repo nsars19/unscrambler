@@ -7,9 +7,15 @@ Running the function with a string argument will return an object with propertie
 
 Passing in the string 'cats' will return the object:
 ```js
+const unscrambler = require("unscrambler")
+// OR
+import unscrambler from "unscrambler"
+
+const scrambledEggs = unscrambler("eggs")
+
 {
-  2 letters: [ 'as', 'ta', 'st' ],
-  3 letters: [ 'act', 'ats', 'tas', 'sac', 'sat' ],
-  4 letters: [ 'cast', 'acts', 'scat' ]
+  2 letters: [ 'es' ],
+  3 letters: [ 'egg', 'seg' ],
+  4 letters: [ 'eggs' ]
 }
 ```
