@@ -6,9 +6,9 @@ Running the function with a string argument will return an object with propertie
 '2 letters' up to 'n letters', where n is the length of the string. The value of each of these properties is an array that holds strings of the specified length. Before a string is placed in an array it is checked against a list of english-language words. Only existing words are placed in the array.
 
 ```js
-const unscrambler = require('unscrambler)
+const unscrambler = require('unscrambler')
 // OR
-import unscrambler from 'unscrambler
+import unscrambler from 'unscrambler'
 
 const scrambledEggs = unscrambler('eggs')
 // scrambledEggs will equal...
