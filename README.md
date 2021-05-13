@@ -13,8 +13,8 @@ import unscrambler from 'unscrambler'
 const scrambledEggs = unscrambler('eggs')
 // scrambledEggs will equal...
 {
-  2 letters: [ 'es' ],
-  3 letters: [ 'egg', 'seg' ],
-  4 letters: [ 'eggs' ]
+  '2 letters': [ 'es' ],
+  '3 letters': [ 'egg', 'seg' ],
+  '4 letters': [ 'eggs' ]
 }
 ```
