@@ -6,8 +6,10 @@ Running the function with a string argument will return an object with propertie
 '2 letters' up to 'n letters', where n is the length of the string. The value of each of these properties is an array that holds strings of the specified length. Before a string is placed in an array it is checked against a list of english-language words. Only existing words are placed in the array.
 
 Passing in the string 'cats' will return the object:
+```js
 {
-<br /> 2 letters': [ 'as', 'ta', 'st' ],
-<br />'3 letters': [ 'act', 'ats', 'tas', 'sac', 'sat' ],
-<br />'4 letters': [ 'cast', 'acts', 'scat' ]
-<br />}
+  2 letters: [ 'as', 'ta', 'st' ],
+  3 letters: [ 'act', 'ats', 'tas', 'sac', 'sat' ],
+  4 letters: [ 'cast', 'acts', 'scat' ]
+}
+```
