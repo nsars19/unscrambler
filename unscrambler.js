@@ -17,12 +17,12 @@ module.exports = function unscrambler(str) {
   const words = {};
 
   const tree = buildTree(str.toLowerCase());
-  const stack = [...tree.children];
+  const queue = [...tree.children];
 
   // Do a BFS and add each node's value to the words object
-  while (stack.length) {
-    let curr = stack.shift();
-    stack.push(...curr.children);
+  while (queue.length) {
+    let curr = queue.shift();
+    queue.push(...curr.children);
 
     if (curr.val.length < 2) continue;
 
